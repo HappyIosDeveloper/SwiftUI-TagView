@@ -3,4 +3,6 @@ Creating a simple selectable tag view in SwiftUI is quite a challenge. here is a
 
 ![Output Example](https://i.stack.imgur.com/1ruBt.png)
 
+Usage:
 
+> TagView(tags: [TagViewItem(title: "cat", isSelected: false), TagViewItem(title: "dog", isSelected: true)])
