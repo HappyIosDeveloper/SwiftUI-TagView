@@ -2,18 +2,18 @@
 Creating a simple selectable tag view in SwiftUI is quite a challenge. here is a simple &amp; elegant example of it.
 
 
-struct TagView: View {
-@State var tags: [TagViewItem]
-@State private var totalHeight = CGFloat.zero       // << variant for ScrollView/List //    = CGFloat.infinity   // << variant for VStack
-var body: some View {
-    VStack {
-        GeometryReader { geometry in
-            self.generateContent(in: geometry)
-        }
-    }
-    .frame(height: totalHeight)// << variant for ScrollView/List
-    //.frame(maxHeight: totalHeight) // << variant for VStack
-}
+> struct TagView: View {
+> @State var tags: [TagViewItem]
+> @State private var totalHeight = CGFloat.zero       // << variant for ScrollView/List //    = CGFloat.infinity   // << variant for VStack
+> var body: some View {
+>     VStack {
+>         GeometryReader { geometry in
+>             self.generateContent(in: geometry)
+>         }
+>     }
+>     .frame(height: totalHeight)// << variant for ScrollView/List
+>     //.frame(maxHeight: totalHeight) // << variant for VStack
+> }
 
 private func generateContent(in g: GeometryProxy) -> some View {
     var width = CGFloat.zero
